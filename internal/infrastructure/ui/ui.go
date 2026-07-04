@@ -45,7 +45,7 @@ func GetArgs() (res ParsedArgs, err error) {
 	ptrTo := flag.String("to", "", "До какого момента показывать логи (включительно)")
 	ptrFormat := flag.String("format", "", fmt.Sprintf("Укажите формат вывода: %s или %s", constants.Md,
 		constants.Adoc))
-	ptrFilterType := flag.String("filter_type", "", fmt.Sprintf(`Фильтр для значений
+	ptrFilterType := flag.String("filter-type", "", fmt.Sprintf(`Фильтр для значений
 Возможные типы фильтра:
 "remote_addr" - ip с которого был сделан запрос;
 "remote_user" - пользователь, аутентифицированный через HTTP аутентификацию;
@@ -57,7 +57,7 @@ func GetArgs() (res ParsedArgs, err error) {
 "body_bytes_sent" - размер ответа сервера в байтах;
 "http_referer" - реферал;
 "http_user_agent" - юзер-агент.`, constants.Layout))
-	ptrFilterValue := flag.String("filter_value", "", "Значение фильтра")
+	ptrFilterValue := flag.String("filter-value", "", "Значение фильтра")
 	flag.Parse()
 
 	// Проверка на обязательный параметр.
@@ -85,10 +85,10 @@ func GetArgs() (res ParsedArgs, err error) {
 
 	res.FilterType, res.FilterValue = *ptrFilterType, *ptrFilterValue
 
-	// filter_type, filter_value должны всегда быть оба указаны в аргументах или оба не указаны. Нельзя ввести
+	// filter-type, filter-value должны всегда быть оба указаны в аргументах или оба не указаны. Нельзя ввести
 	// только один из этих аргументов - они связаны.
 	if (*ptrFilterType != "" && *ptrFilterValue == "") || (*ptrFilterType == "" && *ptrFilterValue != "") {
-		return res, ArgError{msg: "filter_type, filter_value можно использовать только вместе"}
+		return res, ArgError{msg: "filter-type, filter-value можно использовать только вместе"}
 	}
 
 	return res, nil

@@ -18,8 +18,8 @@ type Analyzer struct {
 	StorageType string    // тип хранилища локально, сервер
 	From        time.Time // значение аргумента --From
 	To          time.Time // значение аргумента --To
-	FilterType  string    // значение аргумента --filter_type
-	FilterValue string    // значение аргумента --filter_value
+	FilterType  string    // значение аргумента --filter-type
+	FilterValue string    // значение аргумента --filter-value
 }
 
 // Функция анализа логов, которые хрянятся по пути parsedPath.
@@ -46,7 +46,7 @@ func (analyzer *Analyzer) analyzeLog(parsedPath string, stat *statistics.Statist
 		if analyzer.FilterType != "" {
 			analyzeLog, err := analyzer.checkFilter(analyzer.FilterType, analyzer.FilterValue, logLine)
 			if err != nil {
-				return WrapError{"ошибка при работе с фильтром --filter_type", err}
+				return WrapError{"ошибка при работе с фильтром --filter-type", err}
 			}
 
 			// Если текущий лог не проходит фильтры, переходим к следующему.
