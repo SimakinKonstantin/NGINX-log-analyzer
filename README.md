@@ -21,3 +21,10 @@
 
 ## Выходные данные
 * Текстовый отчет в выбранном формате, который сохраняется в директорию results.
+
+## Скриншоты с результатом выполнения
+<img width="778" height="527" alt="image" src="https://github.com/user-attachments/assets/004adc6d-7feb-4236-a84e-417d25a848d8" />
+
+<img width="1804" height="1236" alt="image" src="https://github.com/user-attachments/assets/9307c815-5cc0-450a-b23b-78af932a9593" />
+
+<img width="1205" height="946" alt="image" src="https://github.com/user-attachments/assets/c34fe2ca-d681-4b95-9649-25d3983cf12a" />
