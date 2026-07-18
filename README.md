@@ -23,7 +23,7 @@
 * Текстовый отчет в выбранном формате, который сохраняется в директорию results.
 
 ## Инструкция по запуску
-Выполнить: `go run ./run/main.go`
+Выполнить: `go run .\cmd\run\main.go --help`
 
 ## Скриншоты с результатом выполнения
 <img width="778" height="527" alt="image" src="https://github.com/user-attachments/assets/004adc6d-7feb-4236-a84e-417d25a848d8" />
